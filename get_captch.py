@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 CAPTCHA_LEN = 3
 
-MODEL_SAVE_PATH = 'F:1/model/'
+MODEL_SAVE_PATH = './Model/'
 def get_result(im):
     img = im.convert("L")
     image_array = np.array(img)
@@ -14,7 +14,7 @@ def get_result(im):
     keep_prob_holder = graph.get_tensor_by_name("keep-prob:0")
     predict_max_idx = graph.get_tensor_by_name("predict_max_idx:0")
     with tf.Session() as sess:
-        saver.restore(sess, tf.train.latest_checkpoint(r'F:/1/model'))
+        saver.restore(sess, tf.train.latest_checkpoint('./Model'))
         predict = sess.run(predict_max_idx, feed_dict={input_holder: [img_data], keep_prob_holder: 1.0})
     predict = np.squeeze(predict)
     if(predict[1]== 0):
