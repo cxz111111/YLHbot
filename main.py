@@ -3,7 +3,6 @@ from info import *
 from subtwitter import get_twitter
 from subyoutube import get_youtube
 
-#登录youlike,youtube，teweet，返回一个可用的browser
 from login import main_login
 
 if __name__ == '__main__':
