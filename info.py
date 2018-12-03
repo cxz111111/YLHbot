@@ -1,3 +1,4 @@
+#youlike，youtube，twitter账户名称密码必填项
 youlike_id = ''
 youlike_password = ''
 youtube_id = ''
