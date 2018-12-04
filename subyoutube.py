@@ -7,6 +7,7 @@ from get_captch import get_result
 
 def youtube_subscribers(url,browser):#一分钟订阅5个
     browser.get(url)
+    print('youtube_subscribers,start')
     sleep(5)
     browser.find_element_by_xpath('//*[@id]/center/a').click()
     for j in range(24):
@@ -32,8 +33,10 @@ def youtube_subscribers(url,browser):#一分钟订阅5个
             browser.switch_to.window(windows[0])
             browser.find_element_by_xpath('//*[@id="DoesLike"]/a').click()
         print('第' + str(j) + '次')
+    print('youtube_subscribers,over')
     sleep(46)
 def youtube_likes(url,browser):#一分钟订阅5个
+    print('youtube_likes,start')
     for i in range(2):
         browser.get(url)
         browser.find_element_by_xpath('//*[@id]/center/a').click()
@@ -57,8 +60,10 @@ def youtube_likes(url,browser):#一分钟订阅5个
                 browser.switch_to.window(windows[0])
                 browser.find_element_by_xpath('//*[@id="DoesLike"]/a').click()
         print('第'+str(i)+'次')
+    print('youtube_likes,over')
 def youtube_views(url,browser):
     browser.get(url)
+    print('youtube_views,start')
     sleep(3)
     element = browser.find_element_by_xpath('//*[@id="captcha"]/table[1]/tbody/tr/td/img')
     browser.save_screenshot('screenshot.png')
@@ -77,7 +82,6 @@ def youtube_views(url,browser):
     browser.find_element_by_xpath('//*[@id="captcha"]/table[2]/tbody/tr/td/input[2]').click()
     sleep(3)
     for i in range(6):
-        # if (browser.find_element_by_xpath('//*/font/span').text == ''):
         browser.find_element_by_xpath('//*[@id="listall"]/center/a[1]').click()
         sleep(1)
         a = browser.find_element_by_xpath('//*[@id]/font').text
@@ -85,6 +89,7 @@ def youtube_views(url,browser):
         sleep(3)
         i = i+1
         print('第'+str(i)+'次')
+    print('youtube_views,over')
 def get_youtube(browser):
     try:
         youtube_subscribers(y_follow,browser)
