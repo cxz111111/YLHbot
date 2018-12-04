@@ -103,6 +103,7 @@ def get_youtube(browser):
         youtube_views(y_view,browser)
     except Exception as e:
         print(e)
+    print('完成youtube任务！')
 if __name__ == '__main__':
     browser = main_login(youlike)
     get_youtube(browser)
