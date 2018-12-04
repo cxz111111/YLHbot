@@ -151,6 +151,7 @@ def get_twitter(browser):
         twitter_retweets(t_retweet, browser)
     except Exception as e:
         print(e)
+    print('完成twitter任务！')
 
 if __name__ =='__main__':
     browser = main_login(youlike)
