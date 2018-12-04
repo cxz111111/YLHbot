@@ -34,7 +34,6 @@ def main_login(url):
     sleep(1)
     browser.find_element_by_xpath('//input[@type="submit"]').click()
     sleep(5)
-    print('登录youlike成功')
     google_login(google,browser)
     sleep(3)
     twitter_login(twitter,browser)
