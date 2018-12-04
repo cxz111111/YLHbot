@@ -7,7 +7,7 @@ def twitter_tweets(url,browser):#每小时限制45次
     browser.get(url)
     sleep(10)
     print('twitter_tweets,start')
-    for i in range(2):
+    for i in range(1):
         for j in range(9):
             nodes = browser.find_elements_by_xpath("//*[@id]/center/iframe")
             browser.switch_to.frame(nodes[j])
@@ -36,7 +36,7 @@ def twitter_retweets(url,browser):
     browser.get(url)
     sleep(10)
     print('twitter_retweets,start')
-    for i in range(3):
+    for i in range(1):
         for j in range(9):
             print('第' + str(j) + '次')
             nodes = browser.find_elements_by_xpath("//*[@id]/center/iframe")
@@ -73,7 +73,7 @@ def twitter_followers(url,browser):
     browser.get(url)
     sleep(10)
     print('twitter_followers,start')
-    for i in range(2):
+    for i in range(1):
         nodes = browser.find_elements_by_xpath('//*[@id]/center/center')
         for j in range(len(nodes)):
             sleep(3)
@@ -108,7 +108,7 @@ def twitter_likes(url,browser):#限制每小时15个like
     browser.get(url)
     sleep(10)
     print('twitter_likes,start')
-    for i in range(3):
+    for i in range(1):
         for j in range(9):
             nodes = browser.find_elements_by_xpath("//*[@id]/center/iframe")
             browser.switch_to.frame(nodes[j])
