@@ -2,7 +2,7 @@
 ## YLHbot是一个自动化操作浏览器赚取youlike积分的小程序[youlikehit官网](https://www.youlikehits.com/stats.php)  
 ## 配置说明
 ### 1.小程序是使用selenium驱动chrome浏览器运行的，请先配置安装selenium，以及chrome浏览器，以及chrome driver。  youtube view模块验证码需要自动识别，请先配置好TensorFlow库  
-### 2.需要使用代理  
+### 2.需要使用代理,代理配置见info.py  
 ## 操作说明  
 ### 1.下载解压文件      
 ### 2.将info.py用写字板格式打开，将个人账户信息填入后保存  
