@@ -8,11 +8,11 @@
 ### 1.下载解压文件      
 ### 2.将info.py用写字板格式打开，将个人账户信息填入后保存  
 ### 3.打开cmd，切换到当前文件夹，
-运行twitter和youtube模块  
-     `python main.py ty`    
-只运行twitter模块
-    `python main.py t`  
-只运行youtube模块
-    `python main.py y`  
+          运行twitter和youtube模块  
+               `python main.py ty`    
+          只运行twitter模块
+              `python main.py t`  
+          只运行youtube模块
+              `python main.py y`  
     
     
