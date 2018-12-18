@@ -10,7 +10,7 @@ def youtube_subscribers(url,browser):#一分钟订阅5个
     print('youtube_subscribers,start')
     sleep(5)
     browser.find_element_by_xpath('//*[@id]/center/a').click()
-    for j in range(24):
+    for j in range(3):
         sleep(5)
         browser.find_element_by_xpath('//*[@id="FBBox"]/a').click()
         sleep(3)
@@ -42,7 +42,7 @@ def youtube_likes(url,browser):#一分钟订阅5个
         browser.get(url)
         browser.find_element_by_xpath('//*[@id]/center/a').click()
         sleep(5)
-        for j in range(20):
+        for j in range(3):
             sleep(15)
             browser.find_element_by_xpath('//*[@id="FBBox"]/a').click()
             sleep(2)
@@ -80,9 +80,10 @@ def youtube_views(url,browser):
     result = get_result(im)
     print(result)
     browser.find_element_by_xpath('//*[@id="captcha"]/table[2]/tbody/tr/td/input[1]').send_keys(str(result))
+    sleep(3)
     browser.find_element_by_xpath('//*[@id="captcha"]/table[2]/tbody/tr/td/input[2]').click()
     sleep(3)
-    for i in range(3):
+    for i in range(1):
         browser.find_element_by_xpath('//*[@id="listall"]/center/a[1]').click()
         sleep(1)
         a = browser.find_element_by_xpath('//*[@id]/font').text
